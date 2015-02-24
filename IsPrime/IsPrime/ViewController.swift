@@ -38,7 +38,6 @@ class ViewController: UIViewController {
                 }
             }
             
-            
             if isPrime == true {
                 answerbox.text = "number is prime"
             } else {
