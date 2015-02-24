@@ -27,8 +27,14 @@ class ViewController: UIViewController {
     
     }
     @IBAction func stop(sender: AnyObject) {
+        timer.invalidate()
+        count = 0
+        time.text = "0"
     }
     @IBAction func pause(sender: AnyObject) {
+        timer.invalidate()
+    
+        
     }
 
     override func viewDidLoad() {
