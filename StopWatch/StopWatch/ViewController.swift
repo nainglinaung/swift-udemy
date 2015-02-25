@@ -38,8 +38,8 @@ class ViewController: UIViewController {
             hour++
             min -= 60
         }
-    
         
+    
         if min < 10 {
             minutes = "0\(min)"
         } else {
