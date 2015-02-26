@@ -39,30 +39,6 @@ class ViewController: UIViewController {
             
         }
         
-        
-        func checker(value :Int,divisor: Int) ->Bool {
-            
-            if value == 1 {
-                return false
-            }
-            if value == divisor {
-                return true
-            }
-            
-            
-            if (value % divisor == 0 ) {
-                return true
-            }
-            
-            
-            
-            
-            return true
-        }
-        
-        
-        
-        
     }
 }
 
