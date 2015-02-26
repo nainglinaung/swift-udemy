@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     func updateTime() {
         count++
-        var seconds:String, minutes:String, hours:String
+        var seconds:String, minutes:String,hours:String
         var milisec = 0
         
         if count > 99 {
@@ -39,27 +39,11 @@ class ViewController: UIViewController {
             min -= 60
         }
         
-    
-        if min < 10 {
-            minutes = "0\(min)"
-        } else {
-            minutes = "\(min)"
-        }
-        
-        if sec < 10 {
-            seconds =  "0\(sec)"
-        } else {
-            seconds = "\(sec)"
-        }
-        
-        if hour < 10 {
-            hours = "0\(hour)"
-        } else {
-            hours = "\(hour)"
-        }
+        minutes = (min < 10) ? "0\(min)" : "\(min)"
+        seconds = (sec < 10) ? "0\(sec)" : "\(sec)"
+        hours   = (hour < 10) ? "0\(hour)" : "\(hour)"
         
         
-    
         time.text = "\(hours):\(minutes):\(seconds):\(count)"
         //println("\(count)")
     }
