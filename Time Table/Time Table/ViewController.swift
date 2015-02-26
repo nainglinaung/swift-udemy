@@ -31,9 +31,9 @@ class ViewController: UIViewController,UITableViewDelegate {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
-        let timeTable = Int(sliderValue.value * 20) 
+        let timeTable = Int(sliderValue.value * 20)
         println(timeTable)
-        cell.textLabel?.text = String(timeTable * indexPath.row)
+        cell.textLabel?.text = String(timeTable * (indexPath.row + 1))
         return cell
     }
     
