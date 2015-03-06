@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wealther" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bFa-R7-VUC">
+                                <rect key="frame" x="0.0" y="-14" width="414" height="736"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jbL-Ry-mb8">
+                                <rect key="frame" x="16" y="28" width="382" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSw-w5-rVi" colorLabel="IBBuiltInLabel-Orange">
+                                <rect key="frame" x="83" y="97" width="249" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Forecast Wealther">
+                                    <color key="titleColor" red="1" green="0.64086537388813292" blue="0.26251005730057619" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forecastWealther:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EGY-Il-C3o"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="wordWrap" numberOfLines="6" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="W5z-pB-rer">
+                                <rect key="frame" x="16" y="224" width="382" height="102.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bFa-R7-VUC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2PX-HW-1co"/>
+                            <constraint firstItem="jbL-Ry-mb8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="5Ol-n2-yOy"/>
+                            <constraint firstItem="TSw-w5-rVi" firstAttribute="top" secondItem="jbL-Ry-mb8" secondAttribute="bottom" constant="39" id="777-xb-dfB"/>
+                            <constraint firstItem="bFa-R7-VUC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Adl-RW-0Vp"/>
+                            <constraint firstItem="TSw-w5-rVi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="DG8-2M-fJ0"/>
+                            <constraint firstItem="jbL-Ry-mb8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fjq-HG-3BM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TSw-w5-rVi" secondAttribute="trailing" constant="66" id="HJi-JA-Kpq"/>
+                            <constraint firstItem="jbL-Ry-mb8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Hlg-ce-sv5"/>
+                            <constraint firstItem="jbL-Ry-mb8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LfM-VQ-wG4"/>
+                            <constraint firstItem="bFa-R7-VUC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Npf-ch-cUJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bFa-R7-VUC" secondAttribute="bottom" constant="14" id="Nqi-Aa-aMk"/>
+                            <constraint firstItem="jbL-Ry-mb8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qc6-pH-SDI"/>
+                            <constraint firstItem="bFa-R7-VUC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-14" id="R9I-6J-s1Q"/>
+                            <constraint firstItem="bFa-R7-VUC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bhF-tg-UAa"/>
+                            <constraint firstItem="W5z-pB-rer" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hGg-pY-Hwm"/>
+                            <constraint firstItem="bFa-R7-VUC" firstAttribute="centerX" secondItem="TSw-w5-rVi" secondAttribute="centerX" id="liN-pC-2a6"/>
+                            <constraint firstItem="W5z-pB-rer" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rQH-mL-gru"/>
+                            <constraint firstItem="bFa-R7-VUC" firstAttribute="centerX" secondItem="jbL-Ry-mb8" secondAttribute="centerX" id="uTU-36-otq"/>
+                            <constraint firstAttribute="trailing" secondItem="bFa-R7-VUC" secondAttribute="trailing" id="uwP-CZ-Ccs"/>
+                            <constraint firstItem="W5z-pB-rer" firstAttribute="top" secondItem="TSw-w5-rVi" secondAttribute="bottom" constant="85" id="xtu-q1-bi4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Adl-RW-0Vp"/>
+                                <exclude reference="Npf-ch-cUJ"/>
+                                <exclude reference="bhF-tg-UAa"/>
+                                <exclude reference="uTU-36-otq"/>
+                                <exclude reference="uwP-CZ-Ccs"/>
+                                <exclude reference="5Ol-n2-yOy"/>
+                                <exclude reference="Qc6-pH-SDI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="wealtherLabel" destination="W5z-pB-rer" id="MLn-YT-dyP"/>
+                        <outlet property="wealthertext" destination="jbL-Ry-mb8" id="Jtw-nF-oU3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sun.jpg" width="2560" height="1920"/>
+    </resources>
+</document>
