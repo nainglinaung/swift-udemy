@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
 
     
     @IBOutlet weak var wealthertext: UITextField!
@@ -29,6 +29,17 @@ class ViewController: UIViewController {
     func showError() {
         wealtherLabel.text = "was not able to find wealther for"+wealthertext.text+"Please try again"
     }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        wealthertext.resignFirstResponder()
+        return true
+    }
+
+    
     
     @IBAction func forecastWealther(sender: AnyObject) {
         
