@@ -25,12 +25,24 @@ class ViewController: UIViewController {
     }
 
     @IBAction func updateFrame() {
-            counter++
+        counter++
         
         if counter == 6 {
             counter = 1
         }
-            imageView.image = UIImage(named: "frame\(counter).jpg")
+        imageView.image = UIImage(named: "frame\(counter).jpg")
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        imageView.center = CGPointMake(imageView.center.x + 400, imageView.center.y )
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        UIView.animateWithDuration(1, animations: { () -> Void in
+            self.imageView.center = CGPointMake(self.imageView.center.x - 400, self.imageView.center.y)
+        })
     }
 
 }
