@@ -27,7 +27,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     }
     
     func showError() {
-        wealtherLabel.text = "was not able to find wealther for"+wealthertext.text+"Please try again"
+        wealtherLabel.text = "was not able to find wealther for "+wealthertext.text+". Please try again"
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -51,15 +51,17 @@ class ViewController: UIViewController,UITextFieldDelegate {
         
         if url != nil {
             
-            println("hi")
             let task = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
                 
                 var urlError = false
                 
+                println(data)
                 if error == nil {
                     var urlContent = NSString(data: data, encoding: NSUTF8StringEncoding)
                     
                     var urlContentArray = urlContent!.componentsSeparatedByString("<span class=\"phrase\">")
+                    
+                    
                     
                     if urlContentArray.count > 0 {
                         
