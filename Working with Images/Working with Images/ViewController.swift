@@ -35,13 +35,13 @@ class ViewController: UIViewController {
     
     
     override func viewDidLayoutSubviews() {
-        imageView.center = CGPointMake(imageView.center.x - 400, imageView.center.y + 200)
+       imageView.alpha = 0
     }
     
     override func viewDidAppear(animated: Bool) {
         
         UIView.animateWithDuration(1, animations: { () -> Void in
-            self.imageView.center = CGPointMake(self.imageView.center.x + 400, self.imageView.center.y - 200)
+           self.imageView.alpha = 1
         })
     }
 
