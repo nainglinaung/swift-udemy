@@ -12,9 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+         timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateFrame", userInfo: nil, repeats: true)
     }
     var counter = 1
+    var timer = NSTimer()
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+       
     }
 
     @IBAction func updateFrame() {
@@ -33,17 +35,18 @@ class ViewController: UIViewController {
         imageView.image = UIImage(named: "frame\(counter).jpg")
     }
     
+
     
-    override func viewDidLayoutSubviews() {
-      imageView.frame = CGRectMake(200, 500, 100, 200)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        
-        UIView.animateWithDuration(1, animations: { () -> Void in
-           self.imageView.frame = CGRectMake(200, 500, 50, 100)
-        })
-    }
+//    override func viewDidLayoutSubviews() {
+//      imageView.frame = CGRectMake(200, 500, 100, 200)
+//    }
+//    
+//    override func viewDidAppear(animated: Bool) {
+//        
+//        UIView.animateWithDuration(1, animations: { () -> Void in
+//           self.imageView.frame = CGRectMake(200, 500, 50, 100)
+//        })
+//    }
 
 }
 
