@@ -39,6 +39,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="R3W-Tq-N49" id="zbI-XC-sse"/>
+                        <outlet property="updateFrameButton" destination="Xuv-Dg-uDn" id="jCy-pw-uiJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

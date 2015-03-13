@@ -10,14 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var updateFrameButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateFrame", userInfo: nil, repeats: true)
+       
     }
     var counter = 1
     var timer = NSTimer()
 
-    @IBOutlet weak var imageView: UIImageView!
     
     
     override func didReceiveMemoryWarning() {
@@ -27,6 +30,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func updateFrame() {
+          timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "animate", userInfo: nil, repeats: true)
+        
+        // need to change button when it's click
+    }
+    
+    
+    func animate() {
         counter++
         
         if counter == 6 {
@@ -34,7 +44,6 @@ class ViewController: UIViewController {
         }
         imageView.image = UIImage(named: "frame\(counter).jpg")
     }
-    
 
     
 //    override func viewDidLayoutSubviews() {
