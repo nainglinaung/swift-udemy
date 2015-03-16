@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CAA9E851AB1A1E3004EFD72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA9E841AB1A1E3004EFD72 /* AppDelegate.swift */; };
+		2CAA9E871AB1A1E3004EFD72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA9E861AB1A1E3004EFD72 /* ViewController.swift */; };
+		2CAA9E8A1AB1A1E3004EFD72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CAA9E881AB1A1E3004EFD72 /* Main.storyboard */; };
+		2CAA9E8C1AB1A1E3004EFD72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CAA9E8B1AB1A1E3004EFD72 /* Images.xcassets */; };
+		2CAA9E8F1AB1A1E3004EFD72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAA9E8D1AB1A1E3004EFD72 /* LaunchScreen.xib */; };
+		2CAA9E9B1AB1A1E3004EFD72 /* tick_tap_toeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA9E9A1AB1A1E3004EFD72 /* tick_tap_toeTests.swift */; };
+		2CAA9EA61AB1A209004EFD72 /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CAA9EA41AB1A209004EFD72 /* board.png */; };
+		2CAA9EA71AB1A209004EFD72 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CAA9EA51AB1A209004EFD72 /* cross.png */; };
+		2CAA9EA91AB1A2DC004EFD72 /* nought.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CAA9EA81AB1A2DC004EFD72 /* nought.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CAA9E951AB1A1E3004EFD72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CAA9E771AB1A1E3004EFD72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CAA9E7E1AB1A1E3004EFD72;
+			remoteInfo = "tick-tap-toe";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CAA9E7F1AB1A1E3004EFD72 /* tick-tap-toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tick-tap-toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CAA9E831AB1A1E3004EFD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CAA9E841AB1A1E3004EFD72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CAA9E861AB1A1E3004EFD72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CAA9E891AB1A1E3004EFD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CAA9E8B1AB1A1E3004EFD72 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2CAA9E8E1AB1A1E3004EFD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2CAA9E941AB1A1E3004EFD72 /* tick-tap-toeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tick-tap-toeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CAA9E991AB1A1E3004EFD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CAA9E9A1AB1A1E3004EFD72 /* tick_tap_toeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tick_tap_toeTests.swift; sourceTree = "<group>"; };
+		2CAA9EA41AB1A209004EFD72 /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
+		2CAA9EA51AB1A209004EFD72 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		2CAA9EA81AB1A2DC004EFD72 /* nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nought.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CAA9E7C1AB1A1E3004EFD72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CAA9E911AB1A1E3004EFD72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CAA9E761AB1A1E3004EFD72 = {
+			isa = PBXGroup;
+			children = (
+				2CAA9E811AB1A1E3004EFD72 /* tick-tap-toe */,
+				2CAA9E971AB1A1E3004EFD72 /* tick-tap-toeTests */,
+				2CAA9E801AB1A1E3004EFD72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CAA9E801AB1A1E3004EFD72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CAA9E7F1AB1A1E3004EFD72 /* tick-tap-toe.app */,
+				2CAA9E941AB1A1E3004EFD72 /* tick-tap-toeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CAA9E811AB1A1E3004EFD72 /* tick-tap-toe */ = {
+			isa = PBXGroup;
+			children = (
+				2CAA9E861AB1A1E3004EFD72 /* ViewController.swift */,
+				2CAA9E881AB1A1E3004EFD72 /* Main.storyboard */,
+				2CAA9EA81AB1A2DC004EFD72 /* nought.png */,
+				2CAA9EA41AB1A209004EFD72 /* board.png */,
+				2CAA9EA51AB1A209004EFD72 /* cross.png */,
+				2CAA9E821AB1A1E3004EFD72 /* Supporting Files */,
+			);
+			path = "tick-tap-toe";
+			sourceTree = "<group>";
+		};
+		2CAA9E821AB1A1E3004EFD72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CAA9E8B1AB1A1E3004EFD72 /* Images.xcassets */,
+				2CAA9E841AB1A1E3004EFD72 /* AppDelegate.swift */,
+				2CAA9E8D1AB1A1E3004EFD72 /* LaunchScreen.xib */,
+				2CAA9E831AB1A1E3004EFD72 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CAA9E971AB1A1E3004EFD72 /* tick-tap-toeTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CAA9E9A1AB1A1E3004EFD72 /* tick_tap_toeTests.swift */,
+				2CAA9E981AB1A1E3004EFD72 /* Supporting Files */,
+			);
+			path = "tick-tap-toeTests";
+			sourceTree = "<group>";
+		};
+		2CAA9E981AB1A1E3004EFD72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CAA9E991AB1A1E3004EFD72 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CAA9E7E1AB1A1E3004EFD72 /* tick-tap-toe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CAA9E9E1AB1A1E3004EFD72 /* Build configuration list for PBXNativeTarget "tick-tap-toe" */;
+			buildPhases = (
+				2CAA9E7B1AB1A1E3004EFD72 /* Sources */,
+				2CAA9E7C1AB1A1E3004EFD72 /* Frameworks */,
+				2CAA9E7D1AB1A1E3004EFD72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tick-tap-toe";
+			productName = "tick-tap-toe";
+			productReference = 2CAA9E7F1AB1A1E3004EFD72 /* tick-tap-toe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CAA9E931AB1A1E3004EFD72 /* tick-tap-toeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CAA9EA11AB1A1E3004EFD72 /* Build configuration list for PBXNativeTarget "tick-tap-toeTests" */;
+			buildPhases = (
+				2CAA9E901AB1A1E3004EFD72 /* Sources */,
+				2CAA9E911AB1A1E3004EFD72 /* Frameworks */,
+				2CAA9E921AB1A1E3004EFD72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CAA9E961AB1A1E3004EFD72 /* PBXTargetDependency */,
+			);
+			name = "tick-tap-toeTests";
+			productName = "tick-tap-toeTests";
+			productReference = 2CAA9E941AB1A1E3004EFD72 /* tick-tap-toeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CAA9E771AB1A1E3004EFD72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Naing Lin Aung";
+				TargetAttributes = {
+					2CAA9E7E1AB1A1E3004EFD72 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					2CAA9E931AB1A1E3004EFD72 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 2CAA9E7E1AB1A1E3004EFD72;
+					};
+				};
+			};
+			buildConfigurationList = 2CAA9E7A1AB1A1E3004EFD72 /* Build configuration list for PBXProject "tick-tap-toe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CAA9E761AB1A1E3004EFD72;
+			productRefGroup = 2CAA9E801AB1A1E3004EFD72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CAA9E7E1AB1A1E3004EFD72 /* tick-tap-toe */,
+				2CAA9E931AB1A1E3004EFD72 /* tick-tap-toeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CAA9E7D1AB1A1E3004EFD72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CAA9EA71AB1A209004EFD72 /* cross.png in Resources */,
+				2CAA9EA61AB1A209004EFD72 /* board.png in Resources */,
+				2CAA9EA91AB1A2DC004EFD72 /* nought.png in Resources */,
+				2CAA9E8A1AB1A1E3004EFD72 /* Main.storyboard in Resources */,
+				2CAA9E8F1AB1A1E3004EFD72 /* LaunchScreen.xib in Resources */,
+				2CAA9E8C1AB1A1E3004EFD72 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CAA9E921AB1A1E3004EFD72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CAA9E7B1AB1A1E3004EFD72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CAA9E871AB1A1E3004EFD72 /* ViewController.swift in Sources */,
+				2CAA9E851AB1A1E3004EFD72 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CAA9E901AB1A1E3004EFD72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CAA9E9B1AB1A1E3004EFD72 /* tick_tap_toeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CAA9E961AB1A1E3004EFD72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CAA9E7E1AB1A1E3004EFD72 /* tick-tap-toe */;
+			targetProxy = 2CAA9E951AB1A1E3004EFD72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CAA9E881AB1A1E3004EFD72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CAA9E891AB1A1E3004EFD72 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CAA9E8D1AB1A1E3004EFD72 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CAA9E8E1AB1A1E3004EFD72 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CAA9E9C1AB1A1E3004EFD72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CAA9E9D1AB1A1E3004EFD72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CAA9E9F1AB1A1E3004EFD72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "tick-tap-toe/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CAA9EA01AB1A1E3004EFD72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "tick-tap-toe/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2CAA9EA21AB1A1E3004EFD72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "tick-tap-toeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tick-tap-toe.app/tick-tap-toe";
+			};
+			name = Debug;
+		};
+		2CAA9EA31AB1A1E3004EFD72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "tick-tap-toeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tick-tap-toe.app/tick-tap-toe";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CAA9E7A1AB1A1E3004EFD72 /* Build configuration list for PBXProject "tick-tap-toe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CAA9E9C1AB1A1E3004EFD72 /* Debug */,
+				2CAA9E9D1AB1A1E3004EFD72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CAA9E9E1AB1A1E3004EFD72 /* Build configuration list for PBXNativeTarget "tick-tap-toe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CAA9E9F1AB1A1E3004EFD72 /* Debug */,
+				2CAA9EA01AB1A1E3004EFD72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CAA9EA11AB1A1E3004EFD72 /* Build configuration list for PBXNativeTarget "tick-tap-toeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CAA9EA21AB1A1E3004EFD72 /* Debug */,
+				2CAA9EA31AB1A1E3004EFD72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CAA9E771AB1A1E3004EFD72 /* Project object */;
+}
