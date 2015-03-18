@@ -27,8 +27,35 @@ class ViewController: UIViewController {
         
         var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
         
+        var annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = "I want to go there"
+        annotation.subtitle = "jk only if that is akihabara"
+        
+        mapView.addAnnotation(annotation)
+        
+        var longpress = UILongPressGestureRecognizer(target: self, action: "action:")
+        longpress.minimumPressDuration = 2.0
+        
         mapView.setRegion(region, animated: true)
+        
+        mapView.addGestureRecognizer(longpress)
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func action(gestureRegonizer:UIGestureRecognizer) {
+        println("Hi mom");
+        var touchpoint = gestureRegonizer.locationInView(self.mapView)
+        var newCoodinate:CLLocationCoordinate2D = mapView.convertPoint(touchpoint, toCoordinateFromView: self.mapView)
+        
+        var newAnnotation = MKPointAnnotation()
+        
+        newAnnotation.coordinate = newCoodinate
+        newAnnotation.title = "I want to go there"
+        newAnnotation.subtitle = "jk only if that is akihabara"
+        
+        mapView.addAnnotation(newAnnotation)
+        
     }
 
     override func didReceiveMemoryWarning() {
