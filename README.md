@@ -3,5 +3,16 @@
 Follow up for UDEMY swift course
 
 
-1 IsPrime
-2 Navigation Toolbar
+* IsPrime
+* Navigation Toolbar
+* Map
+* Tick Tap Toe
+* Working With Images
+* Keyboard
+* Segue
+* Stopwatch
+* Table Views
+* Time Table
+* Todo list
+* Wealther
+* Web Content
