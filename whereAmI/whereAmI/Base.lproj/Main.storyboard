@@ -117,8 +117,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyn-Jz-KYW">
-                                <rect key="frame" x="16" y="272" width="568" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyn-Jz-KYW">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -255,6 +254,7 @@
                         <outlet property="attitude" destination="TTF-In-1TR" id="fN2-Xf-qOK"/>
                         <outlet property="course" destination="6oB-tA-0wb" id="90j-ED-LXe"/>
                         <outlet property="latitude" destination="75M-kH-BL9" id="AWk-QE-6yd"/>
+                        <outlet property="location" destination="Iyn-Jz-KYW" id="ddg-Y3-R32"/>
                         <outlet property="longtitude" destination="P1V-Un-4w4" id="Cdy-o3-AH9"/>
                         <outlet property="speed" destination="hFp-19-ndw" id="IzE-aE-xzC"/>
                     </connections>

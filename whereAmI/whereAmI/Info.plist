@@ -14,6 +14,10 @@
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>NSLocationAlwaysUseDescription</key>
+	<string>I always want to know where you live</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>I want to be with you </string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleSignature</key>

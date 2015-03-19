@@ -13,6 +13,7 @@
 		2CC549521ABAD10000515AAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CC549511ABAD10000515AAF /* Images.xcassets */; };
 		2CC549551ABAD10000515AAF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CC549531ABAD10000515AAF /* LaunchScreen.xib */; };
 		2CC549611ABAD10000515AAF /* whereAmITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC549601ABAD10000515AAF /* whereAmITests.swift */; };
+		2CC5496B1ABADF9600515AAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC5496A1ABADF9600515AAF /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		2CC5495A1ABAD10000515AAF /* whereAmITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whereAmITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC5495F1ABAD10000515AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CC549601ABAD10000515AAF /* whereAmITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereAmITests.swift; sourceTree = "<group>"; };
+		2CC5496A1ABADF9600515AAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CC5496B1ABADF9600515AAF /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		2CC5493C1ABAD10000515AAF = {
 			isa = PBXGroup;
 			children = (
+				2CC5496A1ABADF9600515AAF /* CoreLocation.framework */,
 				2CC549471ABAD10000515AAF /* whereAmI */,
 				2CC5495D1ABAD10000515AAF /* whereAmITests */,
 				2CC549461ABAD10000515AAF /* Products */,
