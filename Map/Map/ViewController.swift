@@ -8,14 +8,23 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,CLLocationManagerDelegate {
 
    // 40.748570, -73.985696
     @IBOutlet weak var mapView: MKMapView!
+    var manager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+        
         
         var longtitude:CLLocationDegrees = -73.985696
         var latitude:CLLocationDegrees = 40.748570
@@ -56,6 +65,29 @@ class ViewController: UIViewController {
         
         mapView.addAnnotation(newAnnotation)
         
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        var userLocation:CLLocation = locations[0] as CLLocation
+      
+        
+        var longtitude:CLLocationDegrees =  userLocation.coordinate.longitude
+        var latitude:CLLocationDegrees = userLocation.coordinate.latitude
+        var latDelta:CLLocationDegrees = 0.01
+        var longDelta:CLLocationDegrees = 0.01
+        
+        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longtitude)
+        
+        var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        println("error is \(error)")
     }
 
     override func didReceiveMemoryWarning() {
