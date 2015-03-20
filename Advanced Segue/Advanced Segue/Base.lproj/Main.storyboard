@@ -35,7 +35,7 @@
         <!--Table View Controller-->
         <scene sceneID="ho7-IO-orB">
             <objects>
-                <tableViewController id="PaR-0B-3KK" sceneMemberID="viewController">
+                <tableViewController id="PaR-0B-3KK" customClass="TableViewController" customModule="Advanced_Segue" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FZc-6h-4y1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
