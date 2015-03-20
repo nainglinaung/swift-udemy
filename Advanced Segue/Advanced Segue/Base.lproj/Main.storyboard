@@ -56,6 +56,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="cdE-8k-f8J"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="vgI-bs-RbQ" style="IBUITableViewCellStyleDefault" id="bEU-FV-sUc">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -70,6 +73,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="qiA-mQ-8vY"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="JLJ-Nb-Gmc" style="IBUITableViewCellStyleDefault" id="BVd-HT-UW2">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -84,6 +90,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="1hx-1z-aKH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -96,7 +105,10 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bt4-UK-roS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440" y="1063"/>
+            <point key="canvasLocation" x="305" y="1057"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qiA-mQ-8vY"/>
+    </inferredMetricsTieBreakers>
 </document>
