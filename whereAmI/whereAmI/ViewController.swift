@@ -53,7 +53,11 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
                 println(error)
                 println("hi")
             } else {
-                println(placeMarks)
+                let p = CLPlacemark(placemark: placeMarks[0] as CLPlacemark)
+                
+                self.location.text = "\(p.subThoroughfare)  \(p.thoroughfare) \n \(p.subLocality) \n \(p.subAdministrativeArea) \n \(p.country) \n \(p.postalCode)"
+                
+                
             }
             
             
