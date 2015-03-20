@@ -21,6 +21,14 @@ class TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        
+        rowsCounter = indexPath.row
+        
+        return indexPath
+        
+    }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
