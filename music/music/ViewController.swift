@@ -28,14 +28,37 @@ class ViewController: UIViewController {
     }
 
   
+    var flag = true
+    
+    @IBAction func change(sender: UISlider) {
+     //   println(sender.value)
+        player.volume = sender.value
+    }
+    
+    
+    @IBOutlet weak var pauseOrResume: UIButton!
+    
+    @IBAction func pauseAndResume(sender: AnyObject) {
+        
+        var tile:String? = "lorem"
+        
+        if flag {
+            player.pause()
+            
+        } else {
+            player.play()
+        }
+        
+        flag = !flag
+        
+    }
+    
     
     @IBAction func stop(sender: UIButton) {
         player.stop()
     }
     
-    @IBAction func volume(sender: AnyObject) {
-        player.volume = 0
-    }
+ 
     
     
     

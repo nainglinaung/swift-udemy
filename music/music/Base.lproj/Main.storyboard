@@ -25,18 +25,27 @@
                                     <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yVv-j7-zED"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwD-KD-ctU">
-                                <rect key="frame" x="172" y="322" width="51" height="30"/>
-                                <state key="normal" title="Volume">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EuA-uC-UPW">
+                                <rect key="frame" x="178" y="114" width="118" height="31"/>
+                                <connections>
+                                    <action selector="change:" destination="BYZ-38-t0r" eventType="valueChanged" id="mkJ-Wu-Swv"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScA-if-UYF">
+                                <rect key="frame" x="180" y="313" width="42" height="30"/>
+                                <state key="normal" title="pause">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="volume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FqU-ah-y0E"/>
+                                    <action selector="pauseAndResume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S4h-d7-KOF"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="pauseOrResume" destination="ScA-if-UYF" id="r88-x0-QRt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
