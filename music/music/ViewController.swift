@@ -25,9 +25,20 @@ class ViewController: UIViewController {
         player.play()
         
         
-        
     }
 
+  
+    
+    @IBAction func stop(sender: UIButton) {
+        player.stop()
+    }
+    
+    @IBAction func volume(sender: AnyObject) {
+        player.volume = 0
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
