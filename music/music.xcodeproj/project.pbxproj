@@ -40,6 +40,7 @@
 		2C4E71931ABDD39000F35E0C /* musicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicTests.swift; sourceTree = "<group>"; };
 		2C4E719D1ABDD43E00F35E0C /* green.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = green.mp3; path = ../../../../../../Music/music/green.mp3; sourceTree = "<group>"; };
 		2C4E719F1ABDD4FA00F35E0C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2C4E71A11ABF327B00F35E0C /* wow-dog */ = {isa = PBXFileReference; lastKnownFileType = file; name = "wow-dog"; path = "../../../../../MEME/wow-dog"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		2C4E717A1ABDD39000F35E0C /* music */ = {
 			isa = PBXGroup;
 			children = (
+				2C4E71A11ABF327B00F35E0C /* wow-dog */,
 				2C4E719D1ABDD43E00F35E0C /* green.mp3 */,
 				2C4E717D1ABDD39000F35E0C /* AppDelegate.swift */,
 				2C4E717F1ABDD39000F35E0C /* ViewController.swift */,
@@ -415,6 +417,7 @@
 				2C4E71991ABDD39000F35E0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C4E719A1ABDD39000F35E0C /* Build configuration list for PBXNativeTarget "musicTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +426,7 @@
 				2C4E719C1ABDD39000F35E0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

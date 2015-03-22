@@ -26,6 +26,9 @@ class ViewController: UIViewController {
         
         
     }
+    
+    
+    
 
   
     var flag = true
@@ -54,12 +57,18 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func stop(sender: UIButton) {
+    @IBAction func stop(sender: UIBarButtonItem) {
         player.stop()
     }
     
  
+    @IBAction func play(sender: UIBarButtonItem) {
+        player.play()
+    }
     
+    @IBAction func pause(sender: UIBarButtonItem) {
+        player.pause()
+    }
     
     
     override func didReceiveMemoryWarning() {

@@ -2,53 +2,87 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cQ-LP-VHG">
-                                <rect key="frame" x="180" y="238" width="31" height="30"/>
-                                <state key="normal" title="stop">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EuA-uC-UPW">
+                                <rect key="frame" x="14" y="269" width="292" height="31"/>
                                 <connections>
-                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yVv-j7-zED"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EuA-uC-UPW">
-                                <rect key="frame" x="178" y="114" width="118" height="31"/>
-                                <connections>
-                                    <action selector="change:" destination="BYZ-38-t0r" eventType="valueChanged" id="mkJ-Wu-Swv"/>
+                                    <action selector="change:" destination="BYZ-38-t0r" eventType="valueChanged" id="IYj-Db-IgC"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScA-if-UYF">
-                                <rect key="frame" x="180" y="313" width="42" height="30"/>
-                                <state key="normal" title="pause">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pauseAndResume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S4h-d7-KOF"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FhP-1H-udd">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="xGZ-A6-F23"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ds3-B0-o4x"/>
+                                    <barButtonItem systemItem="pause" id="g8i-L5-eWF"/>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAE-vv-Km3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Back to Greenday" id="VE9-jm-GBV">
+                                        <barButtonItem key="leftBarButtonItem" title="Stop" id="iI2-Cl-Ktr">
+                                            <connections>
+                                                <action selector="stop:" destination="BYZ-38-t0r" id="9BM-hK-WYW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wow-dog" translatesAutoresizingMaskIntoConstraints="NO" id="LRq-UK-dIB">
+                                <rect key="frame" x="51" y="66" width="240" height="195"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FhP-1H-udd" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="2DE-BC-MAA"/>
+                            <constraint firstItem="qAE-vv-Km3" firstAttribute="centerX" secondItem="LRq-UK-dIB" secondAttribute="centerX" constant="-11" id="GmP-8Q-BZh"/>
+                            <constraint firstItem="EuA-uC-UPW" firstAttribute="top" secondItem="LRq-UK-dIB" secondAttribute="bottom" constant="44" id="H9U-q8-cca"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LRq-UK-dIB" secondAttribute="trailing" constant="13" id="NLq-9N-cJf"/>
+                            <constraint firstAttribute="trailing" secondItem="FhP-1H-udd" secondAttribute="trailing" id="QZJ-dT-s3E"/>
+                            <constraint firstItem="FhP-1H-udd" firstAttribute="top" secondItem="EuA-uC-UPW" secondAttribute="bottom" symbolic="YES" id="Z65-u3-gRB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FhP-1H-udd" secondAttribute="bottom" id="cbN-z6-fYo"/>
+                            <constraint firstItem="EuA-uC-UPW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="coe-2x-lUp"/>
+                            <constraint firstItem="qAE-vv-Km3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ctr-hU-qqI"/>
+                            <constraint firstItem="LRq-UK-dIB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="dHL-hm-0dh"/>
+                            <constraint firstItem="EuA-uC-UPW" firstAttribute="centerX" secondItem="LRq-UK-dIB" secondAttribute="centerX" id="g9L-px-vtj"/>
+                            <constraint firstItem="LRq-UK-dIB" firstAttribute="top" secondItem="qAE-vv-Km3" secondAttribute="bottom" constant="22" id="ivR-tP-M92"/>
+                            <constraint firstItem="qAE-vv-Km3" firstAttribute="leading" secondItem="FhP-1H-udd" secondAttribute="leading" id="mkw-ck-HaN"/>
+                            <constraint firstItem="FhP-1H-udd" firstAttribute="trailing" secondItem="qAE-vv-Km3" secondAttribute="trailing" id="pE3-C5-p8h"/>
+                            <constraint firstItem="EuA-uC-UPW" firstAttribute="centerX" secondItem="qAE-vv-Km3" secondAttribute="centerX" id="urU-7P-OnY"/>
+                            <constraint firstItem="EuA-uC-UPW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xfn-f0-gmz"/>
+                            <constraint firstItem="FhP-1H-udd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zac-NF-qON"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="H9U-q8-cca"/>
+                                <exclude reference="g9L-px-vtj"/>
+                                <exclude reference="Z65-u3-gRB"/>
+                                <exclude reference="cbN-z6-fYo"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <connections>
-                        <outlet property="pauseOrResume" destination="ScA-if-UYF" id="r88-x0-QRt"/>
-                    </connections>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="wow-dog" width="200" height="200"/>
+    </resources>
 </document>
