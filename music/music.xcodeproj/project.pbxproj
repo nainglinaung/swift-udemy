@@ -15,6 +15,7 @@
 		2C4E71941ABDD39000F35E0C /* musicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E71931ABDD39000F35E0C /* musicTests.swift */; };
 		2C4E719E1ABDD43E00F35E0C /* green.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E719D1ABDD43E00F35E0C /* green.mp3 */; };
 		2C4E71A01ABDD4FA00F35E0C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C4E719F1ABDD4FA00F35E0C /* AVFoundation.framework */; };
+		2C4E71A21ABFBFE000F35E0C /* wow-dog in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E71A11ABF327B00F35E0C /* wow-dog */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4E71A21ABFBFE000F35E0C /* wow-dog in Resources */,
 				2C4E719E1ABDD43E00F35E0C /* green.mp3 in Resources */,
 				2C4E71831ABDD39000F35E0C /* Main.storyboard in Resources */,
 				2C4E71881ABDD39000F35E0C /* LaunchScreen.xib in Resources */,

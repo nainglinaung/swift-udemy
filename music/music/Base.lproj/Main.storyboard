@@ -8,7 +8,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="music" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -24,21 +23,13 @@
                                     <action selector="change:" destination="BYZ-38-t0r" eventType="valueChanged" id="IYj-Db-IgC"/>
                                 </connections>
                             </slider>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FhP-1H-udd">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="play" id="xGZ-A6-F23"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ds3-B0-o4x"/>
-                                    <barButtonItem systemItem="pause" id="g8i-L5-eWF"/>
-                                </items>
-                            </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAE-vv-Km3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Back to Greenday" id="VE9-jm-GBV">
                                         <barButtonItem key="leftBarButtonItem" title="Stop" id="iI2-Cl-Ktr">
                                             <connections>
-                                                <action selector="stop:" destination="BYZ-38-t0r" id="9BM-hK-WYW"/>
+                                                <action selector="stop:" destination="BYZ-38-t0r" id="B5L-Ce-Ags"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -47,6 +38,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wow-dog" translatesAutoresizingMaskIntoConstraints="NO" id="LRq-UK-dIB">
                                 <rect key="frame" x="51" y="66" width="240" height="195"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FhP-1H-udd">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="xGZ-A6-F23">
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="bc4-vy-Pem"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ds3-B0-o4x"/>
+                                    <barButtonItem systemItem="pause" id="g8i-L5-eWF">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="dyz-hC-exK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -79,6 +86,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
