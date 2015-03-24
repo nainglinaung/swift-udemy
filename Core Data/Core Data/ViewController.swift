@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         
         var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: content) as NSManagedObject
         
-        newUser.setValue("Rob", forKey: "username")
-        newUser.setValue("pass", forKey: "password")
+        newUser.setValue("Christ", forKey: "username")
+        newUser.setValue("pass2", forKey: "password")
         
         content.save(nil)
         
@@ -29,13 +29,27 @@ class ViewController: UIViewController {
         
         request.returnsObjectsAsFaults = false
         
+        request.predicate = NSPredicate(format: "username = %@", "Christ")
+        
         
         var results = content.executeFetchRequest(request, error: nil)
         
-        if results?.count > 0 {
         
+        
+        if results?.count > 0 {
             for result:AnyObject in results! {
-                  println(result.password)
+                if let user = result.valueForKey("username") as? String {
+                    
+                    if user == "Christ" {
+//                        content.deleteObject(result as NSManagedObject)
+//                        println("User \(user) has been deleted")
+                        result.setValue("Lorem", forKey: "username")
+                    }
+                    
+                    content.save(nil)
+                    println(result)
+                }
+                
             }
         
         } else {
