@@ -26,7 +26,83 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var appDel :AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        
+        
+     
+        
        
+        let urlString = "https://public-api.wordpress.com/rest/v1/sites/mmotaku.net/posts/"
+        let url = NSURL(string: urlString)
+        
+        let session = NSURLSession.sharedSession()
+        
+        let task = session.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                println(error)
+            } else {
+                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+                
+                let posts = jsonResult["posts"] as NSArray
+                var newBlogItem:NSManagedObjectContext
+                
+                //println(posts[0])
+                
+                var items = [[String:String]()]
+                var item = [String:String]()
+                
+                
+                for var i = 0; i < posts.count; i++ {
+//                
+//                    item["content"] = posts[i]["content"] as? NSString
+//                    item["date"]    = posts[i]["content"] as? NSString
+//                   // item["author"]  = authorDict["name"] as NSString
+//
+//                    if i == 0 {
+//                       items[i] = item
+//                    } else {
+//                        items.append(item)
+//                    }
+//                    
+                    //
+                    
+                    
+                   newBlogItem = NSEntityDescription.insertNewObjectForEntityForName("BlogItem", inManagedObjectContext: context) as NSManagedObjectContext
+                    
+                    var authorDict = posts[i]["author"] as NSDictionary
+                    newBlogItem.setValue(authorDict["name"], forKey: "name")
+                    newBlogItem.setValue(posts[i]["title"], forKey:"title")
+                    newBlogItem.setValue(posts[i]["content"], forKey: "content")
+                    newBlogItem.setValue(posts[i]["date"], forKey: "date")
+                    
+                    context.save(nil)
+//
+                    
+                    println("completed")
+                    
+                }
+                
+                
+//                var request = NSFetchRequest(entityName: "BlogItem")
+//                
+//                request.returnsObjectsAsFaults = false
+//                
+//                var results = context.executeFetchRequest(request, error: nil)
+//                
+//                 println(results)
+//                
+       //         println(items)
+                
+            }
+        })
+        
+        task.resume()
+        
+        
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
