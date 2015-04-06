@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2C4E730A1AC17D6000F35E0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E73091AC17D6000F35E0C /* AppDelegate.swift */; };
-		2C4E730D1AC17D6000F35E0C /* Blog_Reader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E730B1AC17D6000F35E0C /* Blog_Reader.xcdatamodeld */; };
 		2C4E730F1AC17D6000F35E0C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E730E1AC17D6000F35E0C /* MasterViewController.swift */; };
 		2C4E73111AC17D6000F35E0C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E73101AC17D6000F35E0C /* DetailViewController.swift */; };
 		2C4E73141AC17D6000F35E0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E73121AC17D6000F35E0C /* Main.storyboard */; };
 		2C4E73161AC17D6000F35E0C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E73151AC17D6000F35E0C /* Images.xcassets */; };
 		2C4E73191AC17D6000F35E0C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E73171AC17D6000F35E0C /* LaunchScreen.xib */; };
 		2C4E73251AC17D6000F35E0C /* Blog_ReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E73241AC17D6000F35E0C /* Blog_ReaderTests.swift */; };
+		2C4E73301AC3FB7400F35E0C /* Blog_Reader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E732E1AC3FB7400F35E0C /* Blog_Reader.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +31,6 @@
 		2C4E73041AC17D6000F35E0C /* Blog Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blog Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4E73081AC17D6000F35E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C4E73091AC17D6000F35E0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C4E730C1AC17D6000F35E0C /* Blog_Reader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blog_Reader.xcdatamodel; sourceTree = "<group>"; };
 		2C4E730E1AC17D6000F35E0C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		2C4E73101AC17D6000F35E0C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2C4E73131AC17D6000F35E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		2C4E731E1AC17D6000F35E0C /* Blog ReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blog ReaderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4E73231AC17D6000F35E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C4E73241AC17D6000F35E0C /* Blog_ReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blog_ReaderTests.swift; sourceTree = "<group>"; };
+		2C4E732F1AC3FB7400F35E0C /* Blog_Reader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blog_Reader.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +81,13 @@
 		2C4E73061AC17D6000F35E0C /* Blog Reader */ = {
 			isa = PBXGroup;
 			children = (
+				2C4E732E1AC3FB7400F35E0C /* Blog_Reader.xcdatamodeld */,
 				2C4E73091AC17D6000F35E0C /* AppDelegate.swift */,
 				2C4E730E1AC17D6000F35E0C /* MasterViewController.swift */,
 				2C4E73101AC17D6000F35E0C /* DetailViewController.swift */,
 				2C4E73121AC17D6000F35E0C /* Main.storyboard */,
 				2C4E73151AC17D6000F35E0C /* Images.xcassets */,
 				2C4E73171AC17D6000F35E0C /* LaunchScreen.xib */,
-				2C4E730B1AC17D6000F35E0C /* Blog_Reader.xcdatamodeld */,
 				2C4E73071AC17D6000F35E0C /* Supporting Files */,
 			);
 			path = "Blog Reader";
@@ -218,9 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C4E730D1AC17D6000F35E0C /* Blog_Reader.xcdatamodeld in Sources */,
 				2C4E730A1AC17D6000F35E0C /* AppDelegate.swift in Sources */,
 				2C4E730F1AC17D6000F35E0C /* MasterViewController.swift in Sources */,
+				2C4E73301AC3FB7400F35E0C /* Blog_Reader.xcdatamodeld in Sources */,
 				2C4E73111AC17D6000F35E0C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +415,7 @@
 				2C4E732A1AC17D6000F35E0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C4E732B1AC17D6000F35E0C /* Build configuration list for PBXNativeTarget "Blog ReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -423,17 +424,19 @@
 				2C4E732D1AC17D6000F35E0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2C4E730B1AC17D6000F35E0C /* Blog_Reader.xcdatamodeld */ = {
+		2C4E732E1AC3FB7400F35E0C /* Blog_Reader.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2C4E730C1AC17D6000F35E0C /* Blog_Reader.xcdatamodel */,
+				2C4E732F1AC3FB7400F35E0C /* Blog_Reader.xcdatamodel */,
 			);
-			currentVersion = 2C4E730C1AC17D6000F35E0C /* Blog_Reader.xcdatamodel */;
-			path = Blog_Reader.xcdatamodeld;
+			currentVersion = 2C4E732F1AC3FB7400F35E0C /* Blog_Reader.xcdatamodel */;
+			name = Blog_Reader.xcdatamodeld;
+			path = ../Blog_Reader.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -1,23 +1,20 @@
 //
 //  MasterViewController.swift
-//  Blog Reader
+//  test
 //
-//  Created by Naing Lin Aung on 3/24/15.
+//  Created by Naing Lin Aung on 3/26/15.
 //  Copyright (c) 2015 Naing Lin Aung. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-var activeItem:String = ""
-
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
-    
-    var appDel :AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-    
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
@@ -29,74 +26,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       
-        
-        
-        
-        var context:NSManagedObjectContext = appDel.managedObjectContext!
-        
-        var request = NSFetchRequest(entityName: "BlogItem")
-        
-        request.returnsObjectsAsFaults = false
-        
-//        if let results = context.executeFetchRequest(request, error: nil) {
-//            for result in results {
-//                context.deleteObject(result as NSManagedObject)
-//                context.save(nil)
-//            }
-//        }
-//        
-    
-    
-        let urlString = "https://public-api.wordpress.com/rest/v1/sites/mmotaku.net/posts/"
-        let url = NSURL(string: urlString)
-        
-        let session = NSURLSession.sharedSession()
-        
-        let task = session.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
-                println(error)
-            } else {
-                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-                
-                let posts = jsonResult["posts"] as NSArray
-                var newBlogItem:NSManagedObject
-                
-                var items = [[String:String]()]
-                var item = [String:String]()
-                
-                
-                
-                println(posts.count)
-                
-                for var i = 0; i < posts.count; i++ {
-                    
-                   newBlogItem = NSEntityDescription.insertNewObjectForEntityForName("BlogItem", inManagedObjectContext: context) as NSManagedObject
-                    
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
-                    
-                    var authorDict = posts[i]["author"] as NSDictionary
-                    newBlogItem.setValue(authorDict["name"], forKey: "name")
-                    newBlogItem.setValue(posts[i]["title"], forKey:"title")
-                    newBlogItem.setValue(posts[i]["content"], forKey: "content")
-                    newBlogItem.setValue(posts[i]["date"], forKey: "date")
-                    
-                    context.save(nil)
-                    
-                }
-                
-                
-                request = NSFetchRequest(entityName: "BlogItem")
-                
-                request.returnsObjectsAsFaults = false
-                
-                
-            }
-        })
-        
-        task.resume()
-        
-        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+        self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
@@ -132,36 +65,26 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-                
-                let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
-                
-                activeItem = object.valueForKey("content")?.description ?? ""
-                
-               
+            let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
                 let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
+                controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
-                
-                
-                
             }
         }
     }
 
     // MARK: - Table View
 
-    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.fetchedResultsController.sections?.count ?? 0
     }
 
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = self.fetchedResultsController.sections![section] as NSFetchedResultsSectionInfo
         return sectionInfo.numberOfObjects
     }
-    
-    
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         self.configureCell(cell, atIndexPath: indexPath)
@@ -190,8 +113,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
-        cell.textLabel!.text = object.valueForKey("title")!.description
-        cell.detailTextLabel?.text = object.valueForKey("name")?.description
+        cell.textLabel!.text = object.valueForKey("timeStamp")!.description
     }
 
     // MARK: - Fetched results controller
@@ -203,14 +125,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         let fetchRequest = NSFetchRequest()
         // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entityForName("BlogItem", inManagedObjectContext: self.managedObjectContext!)
+        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext!)
         fetchRequest.entity = entity
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "date", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "timeStamp", ascending: false)
         let sortDescriptors = [sortDescriptor]
         
         fetchRequest.sortDescriptors = [sortDescriptor]
