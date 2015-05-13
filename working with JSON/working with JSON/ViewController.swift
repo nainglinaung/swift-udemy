@@ -24,7 +24,7 @@ class ViewController: UIViewController {
                 println(error)
             } else {
                 println(data)
-                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
                 
                 println(jsonResult)
                 

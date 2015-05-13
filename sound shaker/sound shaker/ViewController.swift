@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        
     }
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent) {
@@ -32,7 +30,7 @@ class ViewController: UIViewController {
             
             var error:NSError? = nil
             
-            player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: fileLocation), error: &error)
+            player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: fileLocation as String), error: &error)
             
             player.play()
        

@@ -15,9 +15,11 @@ class ViewController: UIViewController {
         var arr = ["lorem","ipsum","dollar"]
         
         NSUserDefaults.standardUserDefaults().setObject(arr, forKey: "get")
-        let get = NSUserDefaults.standardUserDefaults().objectForKey("get")? as NSArray
+        if let get = NSUserDefaults.standardUserDefaults().objectForKey("get") as? NSArray {
+            println(get)
+        }
         
-        println(get)
+ 
         // Do any additional setup after loading the view, typically from a nib.
     }
 

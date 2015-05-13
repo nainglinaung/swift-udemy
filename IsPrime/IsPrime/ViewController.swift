@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
     @IBAction func check(sender: UIButton) {
         
-        if var number  = num.text.toInt()? {
+        if var number  = num.text.toInt() {
             
             var isPrime = (number == 1) ? false : true;
         
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
                     isPrime = false
                 }
             }
-            
+
             answerbox.text = (isPrime == true) ? "number is prime" : "number is not a prime";
             
         }

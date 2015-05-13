@@ -68,7 +68,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        var userLocation:CLLocation = locations[0] as CLLocation
+        var userLocation:CLLocation = locations[0] as! CLLocation
       
         
         var longtitude:CLLocationDegrees =  userLocation.coordinate.longitude

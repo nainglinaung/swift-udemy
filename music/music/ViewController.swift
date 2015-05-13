@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController: UIViewController {
 
     var player:AVAudioPlayer = AVAudioPlayer()
+    var flag = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,31 +21,20 @@ class ViewController: UIViewController {
         
         var error:NSError? = nil
         
-        player = AVAudioPlayer(contentsOfURL: NSURL(string:fileLocation), error: &error)
-        
+        player = AVAudioPlayer(contentsOfURL: NSURL(string:fileLocation as String), error: &error)
         player.play()
-        
         
     }
     
-    
-    
 
-  
-    var flag = true
-    
     @IBAction func change(sender: UISlider) {
         player.volume = sender.value
     }
-    
-    
-
     
     @IBAction func stop(sender: UIBarButtonItem) {
         player.stop()
     }
     
- 
     @IBAction func play(sender: UIBarButtonItem) {
         player.play()
     }

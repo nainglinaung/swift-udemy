@@ -16,7 +16,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
     
-    var appDel :AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    var appDel :AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,12 +31,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         // Do any additional setup after loading the view, typically from a nib.
        
         
-        
-        
         var context:NSManagedObjectContext = appDel.managedObjectContext!
-        
         var request = NSFetchRequest(entityName: "BlogItem")
-        
         request.returnsObjectsAsFaults = false
         
 //        if let results = context.executeFetchRequest(request, error: nil) {
@@ -57,9 +53,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             if (error != nil) {
                 println(error)
             } else {
-                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
                 
-                let posts = jsonResult["posts"] as NSArray
+                let posts = jsonResult["posts"] as! NSArray
                 var newBlogItem:NSManagedObject
                 
                 var items = [[String:String]()]
@@ -71,11 +67,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 
                 for var i = 0; i < posts.count; i++ {
                     
-                   newBlogItem = NSEntityDescription.insertNewObjectForEntityForName("BlogItem", inManagedObjectContext: context) as NSManagedObject
+                   newBlogItem = NSEntityDescription.insertNewObjectForEntityForName("BlogItem", inManagedObjectContext: context) as! NSManagedObject
                     
-
                     
-                    var authorDict = posts[i]["author"] as NSDictionary
+                    var authorDict = posts[i]["author"] as! NSDictionary
                     newBlogItem.setValue(authorDict["name"], forKey: "name")
                     newBlogItem.setValue(posts[i]["title"], forKey:"title")
                     newBlogItem.setValue(posts[i]["content"], forKey: "content")
@@ -111,7 +106,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func insertNewObject(sender: AnyObject) {
         let context = self.fetchedResultsController.managedObjectContext
         let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as NSManagedObject
+        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as! NSManagedObject
              
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
@@ -133,12 +128,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 
-                let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
+                let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
                 
                 activeItem = object.valueForKey("content")?.description ?? ""
                 
                
-                let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
                 
@@ -157,13 +152,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionInfo = self.fetchedResultsController.sections![section] as NSFetchedResultsSectionInfo
+        let sectionInfo = self.fetchedResultsController.sections![section] as! NSFetchedResultsSectionInfo
         return sectionInfo.numberOfObjects
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         self.configureCell(cell, atIndexPath: indexPath)
         return cell
     }
@@ -176,7 +171,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let context = self.fetchedResultsController.managedObjectContext
-            context.deleteObject(self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject)
+            context.deleteObject(self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject)
                 
             var error: NSError? = nil
             if !context.save(&error) {
@@ -189,7 +184,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
-        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
+        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
         cell.textLabel!.text = object.valueForKey("title")!.description
         cell.detailTextLabel?.text = object.valueForKey("name")?.description
     }

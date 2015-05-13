@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         var ButtonLoop:UIButton
         
         for var i = 1; i <= 9; i++ {
-            ButtonLoop = view.viewWithTag(i) as UIButton
+            ButtonLoop = view.viewWithTag(i) as! UIButton
             ButtonLoop.setImage(nil, forState: .Normal)
         }
     }

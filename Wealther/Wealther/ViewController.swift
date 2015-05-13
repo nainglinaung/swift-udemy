@@ -30,7 +30,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         wealtherLabel.text = "was not able to find wealther for "+wealthertext.text+". Please try again"
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
     
@@ -66,7 +66,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
                     if urlContentArray.count > 0 {
                         
                         var wealtherArray = urlContentArray[1].componentsSeparatedByString("</span>")
-                        wealther =  wealtherArray[0] as String
+                        wealther =  wealtherArray[0] as! String
                         wealther = wealther.stringByReplacingOccurrencesOfString("&deg;", withString: "º")
                         
                     } else {

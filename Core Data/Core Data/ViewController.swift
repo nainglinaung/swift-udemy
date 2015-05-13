@@ -14,11 +14,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         var content:NSManagedObjectContext = appDel.managedObjectContext!
         
-        var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: content) as NSManagedObject
+        var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: content) as! NSManagedObject
         
         newUser.setValue("Christ", forKey: "username")
         newUser.setValue("pass2", forKey: "password")

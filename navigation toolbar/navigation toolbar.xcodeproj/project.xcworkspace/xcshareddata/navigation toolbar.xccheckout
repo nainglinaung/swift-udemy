@@ -5,24 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>28AECD08-0C3E-47AB-82B4-45A1EB6D0E89</string>
+	<string>AC63C369-00C9-46D0-9D16-161977E4C7D9</string>
 	<key>IDESourceControlProjectName</key>
-	<string>tick-tap-toe</string>
+	<string>navigation toolbar</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>91F520D75E81D7669088DD6468A40E6EFB75D575</key>
 		<string>github.com:nainglinaung/swift-udemy.git</string>
-		<key>FC7F16E3B611ED5E6E67FC85FC9B100575271F6F</key>
-		<string>github.com:nainglinaung/swift-stanford.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>tick-tap-toe/tick-tap-toe.xcodeproj</string>
+	<string>navigation toolbar/navigation toolbar.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>91F520D75E81D7669088DD6468A40E6EFB75D575</key>
 		<string>../../..</string>
-		<key>FC7F16E3B611ED5E6E67FC85FC9B100575271F6F</key>
-		<string>../../../../CS193P</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:nainglinaung/swift-udemy.git</string>
@@ -32,14 +28,6 @@
 	<string>91F520D75E81D7669088DD6468A40E6EFB75D575</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FC7F16E3B611ED5E6E67FC85FC9B100575271F6F</string>
-			<key>IDESourceControlWCCName</key>
-			<string>CS193P</string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

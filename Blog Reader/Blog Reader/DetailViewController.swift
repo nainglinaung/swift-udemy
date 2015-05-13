@@ -24,7 +24,6 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-       
         webView.loadHTMLString(activeItem, baseURL: nil)
         
     }
